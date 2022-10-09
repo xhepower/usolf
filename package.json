@@ -1,5 +1,5 @@
 {
-  "name": "solegalesf",
+  "name": "usolf",
   "version": "1.0.0",
   "description": "fronted de soluciones legales",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xhepower/solegalesf.git"
+    "url": "git+https://github.com/xhepower/usolf.git"
   },
   "author": "xhepower",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/xhepower/solegalesf/issues"
+    "url": "https://github.com/xhepower/usolf/issues"
   },
-  "homepage": "https://github.com/xhepower/solegalesf#readme",
+  "homepage": "https://github.com/xhepower/usolf#readme",
   "dependencies": {
     "@babel/core": "^7.19.3",
     "@babel/plugin-transform-runtime": "^7.19.1",
