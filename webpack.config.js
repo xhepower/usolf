@@ -21,6 +21,7 @@ module.exports = {
       "@context": path.resolve(__dirname, "src/context/"),
       "@services": path.resolve(__dirname, "src/services/"),
       "@schemas": path.resolve(__dirname, "src/schemas/"),
+      "@utils": path.resolve(__dirname, "src/utils/"),
       "@icons": path.resolve(__dirname, "src/assets/icons/"),
       "@logos": path.resolve(__dirname, "src/assets/logos/"),
     },
@@ -38,7 +39,16 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.(png|jp(e*)g|svg|gif)$/,
+        test: /\.css$/,
+        use: [
+          {
+            loader: "css-loader",
+            options: { modules: true },
+          },
+        ],
+      },
+      {
+        test: /\.(png|jp(e*)g|svg|gif|pdf)$/,
         use: [
           {
             loader: "file-loader",

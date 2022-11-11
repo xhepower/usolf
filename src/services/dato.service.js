@@ -15,5 +15,10 @@ class datoService {
   findByTitle(title) {
     return http.get(`/datos?nombre=${title}`);
   }
+  getPDf() {
+    return http.get(
+      `https://dd.unah.edu.hn/dmsdocument/5284-normas-academica-de-la-unah-pdf`
+    );
+  }
 }
 export default new datoService();

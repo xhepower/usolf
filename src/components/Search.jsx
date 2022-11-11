@@ -1,53 +1,85 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 const handleClickBuscar = () => {};
-function Search() {
+function Search(props) {
+  const { datos, setLosDatos } = props;
+  const onSearchValueChange = (e) => {
+    setSearchValue(e.target.value);
+  };
+  const filtrar = () => {
+    setLosDatos(
+      datos.filter(
+        (item) =>
+          item.name.toLowerCase().indexOf(searchValue.toLowerCase()) > -1
+      )
+    );
+  };
+  const [searchValue, setSearchValue] = useState("");
+  const [selectedElement, setSelectedElement] = useState([]);
   return (
-    <div className="search-container">
-      <div className="search-group">
-        <div className="item-busqueda">
-          <input type="text" name="textoBusqueda" defaultValue="Busqueda" />
-        </div>
-      </div>
-      <div className="search-group">
-        <div className="item-busqueda">
-          <input
-            type="radio"
-            name="radioBusqueda"
-            defaultValue="today"
-            id="today"
-          />
-          <label htmlFor="today">Hoy</label>
-        </div>
-        <div className="item-busqueda">
-          <input
-            type="radio"
-            name="radioBusqueda"
-            defaultValue="thisWeek"
-            id="thisWeek"
-          />
-          <label htmlFor="thisWeek">Esta semana</label>
-        </div>
-        <div className="item-busqueda">
-          <input
-            type="radio"
-            name="radioBusqueda"
-            defaultValue="thisMonth"
-            id="thisMonth"
-          />
-          <label htmlFor="thisMonth">Este mes</label>
-        </div>
-        <div className="item-busqueda">
-          <form>
-            <input type="text" id="textDesde" />
-            <label htmlFor="today">Desde</label>
-            <input type="text" id="textHasta" />
-            <label htmlFor="today">Hasta</label>
+    <div>
+      <div className="search-container">
+        <div className="search-group">
+          <div className="text-container">
+            <label htmlFor="textbusqueda">Búsqueda por nombre</label>
             <input
-              type="button"
-              value="Buscar"
-              onClick={handleClickBuscar}
-            ></input>
-          </form>
+              type="text"
+              id="textBusqueda"
+              className="inputBusqueda"
+              placeholder="Buscar por nombre"
+              value={searchValue}
+              onChange={onSearchValueChange}
+            />
+            <button className="btnbuscar boton" type="button" onClick={filtrar}>
+              <span className="icon">
+                <i className="fa fa-search"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div className="search-group">
+          <div className="select-group">
+            <input
+              type="radio"
+              id="fechaTodos"
+              name="fechaFilter"
+              defaultChecked
+            />
+            <label htmlFor="fechaTodos">Todos</label>
+          </div>
+          <div className="select-group">
+            <input
+              type="radio"
+              id="fechaIntervalo"
+              name="fechaFilter"
+              defaultValue="fechaintervalo"
+            />
+            <label htmlFor="fechaIntervalo">Intervalo</label>
+            <div className="intervalo-group">
+              <label htmlFor="intervaloDesde">Desde</label>
+              <input
+                type="date"
+                id="intervaloDesde"
+                name="intervalo"
+                defaultValue="2022-01-01"
+              />
+              <label htmlFor="intervaloHasta">Hasta</label>
+              <input
+                type="date"
+                id="intervaloHasta"
+                name="intervalo"
+                defaultValue="2022-01-01"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="search-group">
+          <p>Estado de la solicitud</p>
+          <select name="select" defaultValue="todos">
+            <option value="todos">Todos</option>
+            <option value="proceso">En proceso</option>
+            <option value="embajada">En la embajada</option>
+            <option value="recogido">Recogido</option>
+          </select>
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@ import Paginacion from "../components/Paginacion";
 import Lista from "../components/Lista";
 import service from "../services/dato.service";
 import datoService from "../services/dato.service";
+import Visor from "../components/Visor";
 function Home() {
   const obtenerToken = () => {
     const token = localStorage.getItem("token")
@@ -26,23 +27,28 @@ function Home() {
     file: "",
   };
   const [datos, setDatos] = useState([]);
+  const [losDatos, setLosDatos] = useState([]);
   const [archivo, setArchivo] = useState([]);
   const [datosIniciales, setDatosIniciales] = useState([]);
-  const [searchValue, setSearchValue] = useState("");
+  const [file, setFile] = useState("");
   useEffect(() => {
     retrieve();
   }, []);
   const retrieve = async () => {
-    const losdatos = await datoService.getAll();
-    setDatos(losdatos.data);
+    setDatos((await datoService.getAll()).data);
+    setLosDatos((await datoService.getAll()).data);
   };
-  const onSearchValueChange = (e) => {
-    setSearchValue(e.target.value);
-  };
+
   return (
     <>
-      <Search setDatos={setDatos} datos={datos}></Search>
-      <Paginacion data={datos}></Paginacion>
+      <Search setLosDatos={setLosDatos} datos={datos}></Search>
+      <Paginacion
+        losDatos={losDatos}
+        pageLimit={5}
+        pageNeighbours={1}
+        setFile={setFile}
+      ></Paginacion>
+      <Visor file={file}></Visor>
     </>
   );
 }
