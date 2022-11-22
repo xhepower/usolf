@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
 
 import datoService from "../services/dato.service";
-const urlPath = `143.198.154.74:3000`;
+const urlPath = `http://143.198.154.74:3000`;
 function Visor(props) {
   const { file } = props;
   const [numPages, setNumPages] = useState(null);
