@@ -1,5 +1,5 @@
 import React from "react";
-
+import "@styles/Login.scss";
 function EmailSent() {
   const handleClick = () => {
     window.location.href = "/";
@@ -7,8 +7,10 @@ function EmailSent() {
   return (
     <div className="login">
       <div className="login-container">
-        <h1> "El email ha sido enviado</h1>
-        <button onClick={handleClick}>Regresar al home</button>
+        <h1 className="label"> "El email ha sido enviado</h1>
+        <button className="primary-button login-button" onClick={handleClick}>
+          Regresar al home
+        </button>
       </div>
     </div>
   );

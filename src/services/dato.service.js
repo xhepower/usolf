@@ -1,4 +1,5 @@
 import http from "../http-commons";
+
 const obtenerToken = () => {
   const token = localStorage.getItem("token")
     ? localStorage.getItem("token")
@@ -15,10 +16,8 @@ class datoService {
   findByTitle(title) {
     return http.get(`/datos?nombre=${title}`);
   }
-  getPDf() {
-    return http.get(
-      `https://dd.unah.edu.hn/dmsdocument/5284-normas-academica-de-la-unah-pdf`
-    );
+  getPDf(pdf) {
+    return http.get(`/pdfs/archivos/${pdf}`);
   }
 }
 export default new datoService();

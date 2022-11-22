@@ -71,7 +71,7 @@ function ChangePassword() {
         <img src={logo} alt="logo" className="logo" />
         <form className="form" ref={form}>
           <label htmlFor="password1" className="label">
-            Contraseña
+            Nueva Contraseña
           </label>
           <input
             type="password"
@@ -81,7 +81,7 @@ function ChangePassword() {
             required
           />
           <label htmlFor="password2" className="label">
-            Contraseña
+            Repetir contraseña
           </label>
           <input
             type="password"

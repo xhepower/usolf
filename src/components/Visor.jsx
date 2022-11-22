@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
-import * as dotenv from "dotenv";
+
 import datoService from "../services/dato.service";
-const urlPath = `https://usolb.sfo3.digitaloceanspaces.com`;
-//https://usolb.sfo3.digitaloceanspaces.com/usol-10082022-MARIA_ANGELA_ROMERO_ROMERO-1705198400621.pdf
+const urlPath = `localhost:3000`;
 function Visor(props) {
   const { file } = props;
   const [numPages, setNumPages] = useState(null);
@@ -33,7 +32,7 @@ function Visor(props) {
       </div>
       <div className="document-container">
         <Document
-          file={`${urlPath}/${file}.pdf`}
+          file={`${urlPath}/${file}`}
           //file="http://localhost:5001/datos/E845519.pdf"
           onLoadSuccess={onDocumentLoadSuccess}
         >

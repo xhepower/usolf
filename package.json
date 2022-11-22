@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "xhepower",
-    "start": "webpack serve --open",
+    "start": "webpack serve --open  ",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -17,7 +17,6 @@
   "bugs": {
     "url": "https://github.com/xhepower/usolf/issues"
   },
-  "homepage": "https://github.com/xhepower/usolf#readme",
   "dependencies": {
     "@babel/core": "^7.19.3",
     "@babel/plugin-transform-runtime": "^7.19.1",
