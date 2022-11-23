@@ -56,13 +56,16 @@ function Search(props) {
             <label htmlFor="fechaIntervalo">Intervalo</label>
             <div className="intervalo-group">
               <label htmlFor="intervaloDesde">Desde</label>
+              <br></br>
               <input
                 type="date"
                 id="intervaloDesde"
                 name="intervalo"
                 defaultValue="2022-01-01"
               />
+              <br></br>
               <label htmlFor="intervaloHasta">Hasta</label>
+              <br></br>
               <input
                 type="date"
                 id="intervaloHasta"

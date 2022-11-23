@@ -7,7 +7,7 @@ function MenuApp() {
       <nav className="nav-app">
         <div>
           <Link to="/">Registros</Link>
-          <Link to="/users">Usuarios</Link>
+          <Link to="/users">Salir</Link>
         </div>
       </nav>
     </div>

@@ -9,6 +9,8 @@ h1 {
   margin-bottom: 13px;
   width: 100%;
   display: inline-block;
+  text-shadow: 2px 4px 2px $color2;
+  color: white;
 }
 .reader-container {
   padding: 5px;
@@ -20,6 +22,8 @@ hr {
 }
 header {
   background-color: $color1;
+  margin-bottom: 26px;
+  border-radius: 5px;
 }
 header nav {
   text-align: right;
@@ -31,5 +35,21 @@ header nav {
 }
 .nav-app a {
   color: white;
+  padding: 5px;
+}
+.search-container {
+  padding: 5px;
+  padding: 5px;
+  border: 2px solid $color1;
+  border-radius: 20px;
+  display: block;
+}
+.search-group {
+  padding: 5px 0 13px 15px;
+}
+.intervalo-group {
+  background-color: gray;
+  display: block;
+  align-items: center;
   padding: 5px;
 }
