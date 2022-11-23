@@ -40,7 +40,7 @@ function Home() {
   };
 
   return (
-    <>
+    <div className="home-container">
       <Search setLosDatos={setLosDatos} datos={datos}></Search>
       <Paginacion
         losDatos={losDatos}
@@ -49,7 +49,7 @@ function Home() {
         setFile={setFile}
       ></Paginacion>
       <Visor file={file}></Visor>
-    </>
+    </div>
   );
 }
 

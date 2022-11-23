@@ -4,9 +4,7 @@ import logo from "../../public/assets/logos/logo_yard_sale.svg";
 function Header() {
   return (
     <header>
-      <div className="nav-logocontainer">
-        <img src={logo} />
-      </div>
+      <div className="nav-logocontainer"></div>
       <div className="cajaTitulo">
         <div className="cajaTitulo-texto">
           <h1>USA SOLUTIONS</h1>

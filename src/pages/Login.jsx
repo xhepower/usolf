@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/Login.scss";
+import "../styles/Home.scss";
 import logo from "@logos/logo_yard_sale.svg";
 import { authSchema } from "@schemas/auth.schema";
 import authService from "@services/auth.service";

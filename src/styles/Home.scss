@@ -1,0 +1,35 @@
+@import "Global";
+.home-container {
+  border: 4px;
+  border-color: $color1;
+  max-width: 300px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 13px;
+  width: 100%;
+  display: inline-block;
+}
+.reader-container {
+  padding: 5px;
+  max-width: 300px;
+  overflow-x: scroll;
+}
+hr {
+  margin-bottom: 26px;
+}
+header {
+  background-color: $color1;
+}
+header nav {
+  text-align: right;
+  display: inline-block;
+  width: 100%;
+}
+.nav-app {
+  margin-bottom: 26px;
+}
+.nav-app a {
+  color: white;
+  padding: 5px;
+}
