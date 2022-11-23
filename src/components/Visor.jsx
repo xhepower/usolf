@@ -20,13 +20,17 @@ function Visor(props) {
   return (
     <div className="reader-container">
       <div className="nav-PDF">
-        <button className="pdf-prev" onClick={goToPrevPage}>
+        <button className="pdf-prev pdfmov" onClick={goToPrevPage}>
           Anterior
         </button>
         <p className="pdf-PageNumber">
           Página <b>{pageNumber}</b> de <b>{numPages}</b>
         </p>
-        <button className="pdf-next" onClick={goToNextPage}>
+        <button
+          className="pdf-next
+        pdfmov"
+          onClick={goToNextPage}
+        >
           Siguiente
         </button>
       </div>

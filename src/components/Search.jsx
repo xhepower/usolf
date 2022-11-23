@@ -61,6 +61,7 @@ function Search(props) {
                 type="date"
                 id="intervaloDesde"
                 name="intervalo"
+                className="intervalo-hasta"
                 defaultValue="2022-01-01"
               />
               <br></br>
@@ -68,6 +69,7 @@ function Search(props) {
               <br></br>
               <input
                 type="date"
+                className="intervalo-hasta"
                 id="intervaloHasta"
                 name="intervalo"
                 defaultValue="2022-01-01"
@@ -76,8 +78,8 @@ function Search(props) {
           </div>
         </div>
         <div className="search-group">
-          <p>Estado de la solicitud</p>
-          <select name="select" defaultValue="todos">
+          <label>Estado de la solicitud</label>
+          <select className="select-estado" name="select" defaultValue="todos">
             <option value="todos">Todos</option>
             <option value="proceso">En proceso</option>
             <option value="embajada">En la embajada</option>

@@ -36,6 +36,11 @@ header nav {
 .nav-app a {
   color: white;
   padding: 5px;
+  border: 3px solid $color2;
+  border-radius: 5px;
+}
+.salir {
+  margin-right: 5px;
 }
 .search-container {
   padding: 5px;
@@ -47,9 +52,83 @@ header nav {
 .search-group {
   padding: 5px 0 13px 15px;
 }
+.search-group * {
+  padding: 3px;
+}
+.inputBusqueda {
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px dashed $color1;
+}
+
 .intervalo-group {
   background-color: gray;
   display: block;
   align-items: center;
   padding: 5px;
+}
+.intervalo-group * {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+.select-estado {
+  border-radius: 5px;
+  margin-left: 23px;
+}
+.intervalo-hasta {
+  border-radius: 5px;
+}
+.paginacion-container {
+  border: 2px solid $color1;
+  border-radius: 20px;
+  margin-top: 23px;
+  padding: 5px;
+}
+.pagination {
+  margin: 10px;
+
+  display: flex;
+  justify-content: space-between;
+}
+.page-item {
+  list-style: none;
+  border: 1px solid $color1;
+  border-radius: 5px;
+  background-color: $color1;
+  box-shadow: 2px 2px $color2;
+  color: $color3;
+}
+table {
+  font-size: 0.8rem;
+  color: $color1;
+}
+thead {
+}
+th {
+  font-size: 1rem;
+  border-top: 2px solid $color1;
+  border-bottom: 2px solid $color1;
+}
+.reader-container {
+  border: 2px solid $color1;
+  padding: 5px;
+  margin-top: 23px;
+}
+.nav-PDF {
+  padding: 5px;
+  margin-bottom: 23px;
+  display: flex;
+  justify-content: space-between;
+  color: $color1;
+  border-bottom: 2px dashed $color1;
+}
+.pdf-PageNumber {
+  font-weight: bold;
+}
+.pdfmov {
+  background-color: $color1;
+  color: $color3;
+  box-shadow: 2px 2px $color2;
+  border: 1px solid $color1;
+  border-radius: 5px;
 }

@@ -22,7 +22,7 @@ function Paginacion(props) {
     setItemOffset(newOffset);
   };
   return (
-    <>
+    <div className="paginacion-container">
       <div className="paginacion">
         <ReactPaginate
           nextLabel="Sig >"
@@ -46,7 +46,7 @@ function Paginacion(props) {
         />
       </div>
       <Lista setFile={setFile} datos={currentData}></Lista>
-    </>
+    </div>
   );
 }
 

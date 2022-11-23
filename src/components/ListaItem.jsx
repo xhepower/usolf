@@ -20,7 +20,7 @@ function ListaItem(props) {
     <tr>
       <td>{formatearFecha(dato.date)}</td>
       <td>{dato.name}</td>
-      <td></td>
+      <td>{dato.estado}</td>
       <td>
         <button type="button" onClick={imprimir} className="btnVer">
           <span className="icon">
