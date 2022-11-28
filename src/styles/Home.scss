@@ -15,7 +15,6 @@ h1 {
 .reader-container {
   padding: 5px;
   max-width: 300px;
-  overflow-x: scroll;
 }
 hr {
   margin-bottom: 26px;
@@ -109,6 +108,14 @@ th {
   border-top: 2px solid $color1;
   border-bottom: 2px solid $color1;
 }
+.btnVer {
+  cursor: pointer;
+  background-color: $color1;
+  border: 1px solid $color1;
+  color: $color3;
+  box-shadow: 1px 1px $color2;
+  border-radius: 5px;
+}
 .reader-container {
   border: 2px solid $color1;
   padding: 5px;
@@ -131,4 +138,9 @@ th {
   box-shadow: 2px 2px $color2;
   border: 1px solid $color1;
   border-radius: 5px;
+  cursor: pointer;
+}
+.react-pdf__Page {
+  overflow-x: scroll;
+  cursor: hand;
 }
