@@ -35,8 +35,12 @@ function Home() {
     retrieve();
   }, []);
   const retrieve = async () => {
-    setDatos((await datoService.getAll()).data);
-    setLosDatos((await datoService.getAll()).data);
+    try {
+      setDatos((await datoService.getAll()).data);
+      setLosDatos((await datoService.getAll()).data);
+    } catch (error) {
+      window.location.href = "/login";
+    }
   };
 
   return (

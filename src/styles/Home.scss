@@ -12,6 +12,13 @@ h1 {
   text-shadow: 2px 4px 2px $color2;
   color: white;
 }
+h2 {
+  text-align: right;
+  padding: 5px;
+  text-shadow: 1px 1px 1px $color2;
+  color: white;
+  font-size: 0.8rem;
+}
 .reader-container {
   padding: 5px;
   max-width: 300px;
@@ -143,4 +150,30 @@ th {
 .react-pdf__Page {
   overflow-x: scroll;
   cursor: hand;
+}
+.no-visible {
+  display: none;
+}
+.salir a {
+  margin: 5px;
+}
+.btnEliminar {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: $color2;
+  color: $color3;
+  border-radius: 3px;
+}
+.tableUser {
+  margin-top: 13px;
+  place-self: center;
+  border: 2px solid $color1;
+  font-size: 1.2rem;
+}
+.tableUser th {
+  border: none;
+}
+.tableUser tbody td {
+  border: 2px solid $color1;
 }

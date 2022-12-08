@@ -8,6 +8,19 @@
   align-content: center;
   flex-direction: column;
 }
+.userform {
+  border: 2px solid $color1;
+  border-radius: 13px;
+}
+.form-titulo {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 13px;
+  width: 100%;
+  display: inline-block;
+  text-shadow: 1px 1px 2px $color2;
+  color: $color1;
+}
 label {
   text-align: center;
   font-weight: bold;

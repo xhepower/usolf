@@ -19,5 +19,14 @@ class datoService {
   getPDf(pdf) {
     return http.get(`/pdfs/archivos/${pdf}`);
   }
+  getUsers() {
+    return http.get(`/users`);
+  }
+  saveUser(data) {
+    return http.post(`/users`, data);
+  }
+  deleteUser(id) {
+    return http.delete(`/users/${id}`);
+  }
 }
 export default new datoService();

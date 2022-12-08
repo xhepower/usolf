@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppLayout from "@containers/AppLayout";
 import Login from "@pages/Login";
+import Users from "@pages/Users";
 import Home from "@pages/Home";
 import Cuentas from "@pages/Cuentas";
 import Layout from "@containers/Layout";
@@ -42,11 +43,11 @@ const App = () => {
 
           <Route
             exact
-            path="/cuentas"
+            path="/users"
             element={
-              <Layout>
-                <Cuentas />
-              </Layout>
+              <AppLayout>
+                <Users />
+              </AppLayout>
             }
           />
         </Routes>

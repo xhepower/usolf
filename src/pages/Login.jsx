@@ -5,7 +5,7 @@ import "../styles/Home.scss";
 import logo from "@logos/logo_yard_sale.svg";
 import { authSchema } from "@schemas/auth.schema";
 import authService from "@services/auth.service";
-
+import datoService from "@services/dato.service";
 function Login() {
   const [isLoading, setIsLoading] = useState(false);
   const [token, setToken] = useState([]);
@@ -34,6 +34,9 @@ function Login() {
       datos.errors = error.response.status;
       setIsLoading(false);
     }
+    if (datos.token) {
+      window.location.href = "/";
+    }
     return datos;
   };
   const handleSubmit = async (event) => {
@@ -47,11 +50,10 @@ function Login() {
     const rta = await handleLogin(data);
     setErrors(rta.errors);
     setToken(rta.token);
+
     console.log(obtenerToken());
   };
-  if (obtenerToken()) {
-    window.location.href = "/";
-  }
+
   return (
     <div className="Login">
       {isLoading ? (
@@ -65,7 +67,6 @@ function Login() {
         </div>
       ) : null}
       <div className="Login-container">
-        <img src={logo} alt="logo" className="logo" />
         <form className="form" ref={form}>
           <label htmlFor="email" className="label">
             Correo eléctronico
