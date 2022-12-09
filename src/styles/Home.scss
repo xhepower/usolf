@@ -103,6 +103,7 @@ header nav {
   background-color: $color1;
   box-shadow: 2px 2px $color2;
   color: $color3;
+  cursor: pointer;
 }
 table {
   font-size: 0.8rem;
@@ -179,4 +180,11 @@ th {
 }
 .intervaloHidden {
   display: none;
+}
+.datos-cantidad {
+  text-align: right;
+  padding: 5px;
+  text-shadow: 1px 1px 1px $color2;
+  color: $color1;
+  font-size: 0.8rem;
 }

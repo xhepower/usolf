@@ -29,6 +29,7 @@ function Home() {
   const [datos, setDatos] = useState([]);
   const [losDatos, setLosDatos] = useState([]);
   const [archivo, setArchivo] = useState([]);
+  const [archivos, setArchivos] = useState([]);
   const [datosIniciales, setDatosIniciales] = useState([]);
   const [file, setFile] = useState("");
   useEffect(() => {
@@ -38,7 +39,9 @@ function Home() {
     try {
       setDatos((await datoService.getAll()).data);
       setLosDatos((await datoService.getAll()).data);
+      setArchivos((await datoService.getArchivos()).data);
     } catch (error) {
+      console.error(error);
       window.location.href = "/login";
     }
   };
@@ -48,6 +51,7 @@ function Home() {
       <Search setLosDatos={setLosDatos} datos={datos}></Search>
       <Paginacion
         losDatos={losDatos}
+        archivos={archivos}
         pageLimit={5}
         pageNeighbours={1}
         setFile={setFile}

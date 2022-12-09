@@ -19,6 +19,9 @@ class datoService {
   getPDf(pdf) {
     return http.get(`/pdfs/archivos/${pdf}`);
   }
+  getArchivos() {
+    return http.get(`/pdfs/archivos`);
+  }
   getUsers() {
     return http.get(`/users`);
   }

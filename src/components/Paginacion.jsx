@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Lista from "./Lista";
 import ReactPaginate from "react-paginate";
 function Paginacion(props) {
-  const { losDatos, pageLimit, pageNeighbours, setFile } = props;
+  const { losDatos, pageLimit, pageNeighbours, setFile, archivos } = props;
   const totalRecords = losDatos.length;
   const [totalPages, setTotalPages] = useState(
     Math.ceil(losDatos.length / pageLimit)
@@ -24,6 +24,12 @@ function Paginacion(props) {
   return (
     <div className="paginacion-container">
       <div className="paginacion">
+        <p className="datos-cantidad">
+          Registros base de datos {losDatos.length}
+        </p>
+        <p className="datos-cantidad">
+          Registros base de datos {archivos.length}
+        </p>
         <ReactPaginate
           nextLabel="Sig >"
           onPageChange={handlePageClick}
