@@ -27,9 +27,7 @@ function Paginacion(props) {
         <p className="datos-cantidad">
           Registros base de datos {losDatos.length}
         </p>
-        <p className="datos-cantidad">
-          Registros base de datos {archivos.length}
-        </p>
+        <p className="datos-cantidad">Archivos subidos {archivos.length}</p>
         <ReactPaginate
           nextLabel="Sig >"
           onPageChange={handlePageClick}
